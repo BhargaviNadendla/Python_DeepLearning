@@ -1,12 +1,11 @@
 from bs4 import BeautifulSoup
 import urllib.request
-import csv
 import pandas as pd
 from tabulate import tabulate
 
 url = "https://en.wikipedia.org/wiki/List_of_state_and_union_territory_capitals_in_India"
-source_code = urllib.request.urlopen(url)  #open the url and get the source code
-plain_text = source_code
+res = urllib.request.urlopen(url)  #open the url and get the source code
+plain_text = res
 soup = BeautifulSoup(plain_text, "html.parser") # pass the plain_text and html parser through beautiful soup
 print(soup.find('title').string)   #print title of the html file
 result_list = soup.findAll('a')    # Store all the anchor tags into result_list
@@ -23,14 +22,6 @@ for tr in result_table:
 
 
 
-table = soup.find('table', {'class': 'wikitable sortable plainrowheaders'})
-headers = [th.text for th in table.select("tr th")]
-
-with open("out.csv", "w") as f:
-    wr = csv.writer(f)
-    wr.writerow(headers)
-    wr.writerows([[td.text for td in row.find_all("td")] for row in table.select("tr + tr")]) # wrote table into out.csv
-
-
-df = pd.read_csv('out.csv', encoding = "ISO-8859-1")
-print(tabulate(df, headers=headers, tablefmt='psql'))
+table = soup.find_all('table')[1]  #finding the desired table
+df = pd.read_html(str(table),header=0)  #reading the content of the table with pandas
+print(tabulate(df[0], headers='keys', tablefmt='psql')) #tabulating the table content and table header
