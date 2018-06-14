@@ -12,8 +12,8 @@ class FullTimeEmployee(Employee):
         print("salary of {} after raise is {}".format(self.name, raise_val))
         print("The dependents of {} are: ".format(self.name))
         print("The dependents are: ")
-        for k,v in self.family.items():
-            print("{} - {}" .format(k,v))
+        for k,v in self.family.items():     #printing the dependents
+            print("{} - {}" .format(k,v))   
 
 
 
