@@ -3,12 +3,12 @@ class FullTimeEmployee(Employee):
     def __init__(self, name, family, salary, department):  #defining the default constructor for the child class
         Employee.__init__(self, name, family, salary, department) #Referencing the base class constructor
         self.name = name
-        self.family = family
+        self.family = family           #initialising the actual parameters
         self.salary = salary
         self.department = department
 
     def raise_sal(self, raise_percent):
-        raise_val = self.salary + (self.salary * raise_percent)/100
+        raise_val = self.salary + (self.salary * raise_percent)/100  #find the raise in salary and add it to the actual salary
         print("salary of {} after raise is {}".format(self.name, raise_val))
         print("The dependents of {} are: ".format(self.name))
         print("The dependents are: ")
