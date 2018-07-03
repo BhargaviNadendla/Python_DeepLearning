@@ -91,7 +91,7 @@ class Passenger(Person, FlightDetails, Booking):
     def __init__(self,firstname,lastname,emailaddress,phonenumber,age,ssn,flight_num,
                  flight_name,travelclass, deptdate,depttime, source, destination,seatnum, seatletter):
         # Super() keyword
-        super().__init__(firstname, lastname, emailaddress, phonenumber, age, ssn)  # super keyword used
+        super(Passenger,self).__init__(firstname, lastname, emailaddress, phonenumber, age, ssn)  # super keyword used
         # Calling the Booking class
         Booking.__init__(self,travelclass, deptdate, source,destination,depttime,seatnum,seatletter)
         # Calling the FlightDetails class
