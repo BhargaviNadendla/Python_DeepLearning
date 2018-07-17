@@ -1,0 +1,6 @@
+model_checkpoint_path: "C:\\Users\\Bhargavii Nadendla\\Downloads\\DeepLearning_Lesson5\\DeepLearning_Lesson5\\runs\\1531849482\\checkpoints\\model-700"
+all_model_checkpoint_paths: "C:\\Users\\Bhargavii Nadendla\\Downloads\\DeepLearning_Lesson5\\DeepLearning_Lesson5\\runs\\1531849482\\checkpoints\\model-300"
+all_model_checkpoint_paths: "C:\\Users\\Bhargavii Nadendla\\Downloads\\DeepLearning_Lesson5\\DeepLearning_Lesson5\\runs\\1531849482\\checkpoints\\model-400"
+all_model_checkpoint_paths: "C:\\Users\\Bhargavii Nadendla\\Downloads\\DeepLearning_Lesson5\\DeepLearning_Lesson5\\runs\\1531849482\\checkpoints\\model-500"
+all_model_checkpoint_paths: "C:\\Users\\Bhargavii Nadendla\\Downloads\\DeepLearning_Lesson5\\DeepLearning_Lesson5\\runs\\1531849482\\checkpoints\\model-600"
+all_model_checkpoint_paths: "C:\\Users\\Bhargavii Nadendla\\Downloads\\DeepLearning_Lesson5\\DeepLearning_Lesson5\\runs\\1531849482\\checkpoints\\model-700"
